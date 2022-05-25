@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    font-family: 'Square Peg', cursive;
+    text-align: center;
+    animation-delay: 1s;
+    animation: enlarge 7s;
+    font-size: 32px;
+}
+
+nav {
+    float: top;
+}
+
+ul.github {
+    margin: 20px;
+    float: left;
+    background-color: white;
+    overflow: visible;
+}
+
+p.github {
+    float: left;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f64f59;
+}
+
+li {
+    display: inline-block;
+    width: 33%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1px 16px;
+    text-decoration: none;
+    font-family: 'Square Peg', cursive;
+    font-size: 62px;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+p {
+    margin: 100px 70px;
+    float: right;
+}
+
+.name {
+    font-family: 'Square Peg', cursive;
+    font-size: 64px;
+}
+
+.left {
+    padding: 400px 0;
+    height: 400px;
+    float: left;
+}
+
+@keyframes enlarge {
+    35% {
+        font-size: 181px;
+        font-stretch: 50%;
+        letter-spacing: 12px
+    }
+}
+
+.space {
+    height: 40px;
+    animation-delay: 3s;
+    animation: moveDown 5s;
+    background-color: gold;
+}
+
+@keyframes moveDown {
+    0% {
+        height: 1px
+    }
+    50% {
+        height: 100px
+    }
+    100% {
+        height: 40px
+    }
+}
+
+.icons {
+    width: 400px;
+    position: static;
+    left: 0;
+}

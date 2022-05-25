@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    line-height: 140px;
+    height: 100px;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 72px;
+    font-weight: normal;
+    text-shadow: 10px 0 0 gray;
+    letter-spacing: 10px;
+}
+
+.banner a:link {
+    text-decoration: none;
+}
+
+.img {
+    width: 100%;
+    margin: 0;
+}
+
+.banner:hover {
+    background-size: 0.1%;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    border: 10px black;
+    transition: 10s;
+}
+
+#grad1 {
+    background-image: linear-gradient(to bottom right, #12c2e9, #c471ed, #f64f59);
+    transition: 10s;
+}
+
+article {
+    width: 70%;
+    height: 250px;
+    background-color: cadetblue;
+    float: right;
+    padding: 50px 10px 20px;
+    margin: 10px;
+    overflow: scroll;
+    display: block;
+}
+
+p {
+    background-color: wheat;
+    margin: 0 auto;
+    text-align: center;
+    font-family: AppleGothic, monospace;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.bottomi {
+    background-color: wheat;
+    margin: 0 auto;
+    text-align: center;
+    font-family: AppleGothic, fantasy;
+    font-size: 24px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(3, 11, 35, 0.91);
+    clear: both;
+}
+
+.bottom {
+    bottom: 0;
+    background-color: black;
+    font-family: "Avenir Next", serif;
+    color: azure;
+    font-weight: bold;
+    font-size: 42px;
+    letter-spacing: 6px;
+}
+
+aside {
+    width: 70%;
+    height: 10px;
+    margin: auto;
+    background-color: lightcoral;
+    float: left;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+div {
+    background-color: white;
+}
+
+.animation {
+    color: white;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 500%;
+    background-color: #555555;
+    height: 100px;
+    transition: width 2s, height 2s, transform 2s;
+    animation: rotate 8s;
+    animation-delay: 2s;
+
+}
+
+@keyframes rotate {
+    20% {
+        font-size: 50px
+    }
+    40% {
+        font-size: 60px
+    }
+    50% {
+        background: aqua;
+        font-size: 72px;
+        height: 200px;
+        color: black;
+        transform: rotate(180deg)
+    }
+}
+
+nav {
+    width: 25%;
+    float: left;
+    border-left: 6px yellow;
+    background-color: #555;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    list-style-type: none;
+    line-height: 100px;
+    width: 100%;
+    background-color: blueviolet;
+    font-family: "Arial Black", monospace;
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+a {
+    display: block;
+    color: khaki;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
