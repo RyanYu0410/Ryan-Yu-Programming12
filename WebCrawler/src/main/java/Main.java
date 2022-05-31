@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         // 利用Jsoup获得连接
-        Connection connect = Jsoup.connect("https://www.wallpaper.com/");
+        Connection connect = Jsoup.connect("https://www.nike.com/ca/w/lifestyle-shoes-13jrmzy7ok");
         try {
             // 得到Document对象
             Document document = connect.get();
