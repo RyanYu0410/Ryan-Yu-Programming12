@@ -326,7 +326,7 @@ button, input, optgroup, select, textarea {
 
 .menuWithSideNav___2WMmN {
     padding-left: 131px;
-    display: inline-flex;
+    display: flex;
 }
 
 .sideNav___3P0Yp {
@@ -345,6 +345,14 @@ button, input, optgroup, select, textarea {
     overflow: auto;
     padding-left: 119px !important;
     padding-right: 9% !important;
+}
+
+.grid--compactGutter .gridItem {
+    padding: 0 0.4rem;
+}
+
+.md-size6of12 {
+    width: 50%;
 }
 
 .text-bold {
@@ -376,12 +384,19 @@ button, input, optgroup, select, textarea {
 }
 
 .thumb___3fkyn {
-    max-width: 112px;
-}
-
-.thumb___3fkyn {
     max-width: 72px;
     width: 100%;
+}
+
+.baseMenu___1AWcA {
+    flex: 1 1 0;
+    overflow: auto;
+    padding-left: 119px !important;
+    padding-right: 9% !important;
+}
+
+.lg-pt6 {
+    padding-top: 4rem !important;
 }
 
 .mr3 {
@@ -429,6 +444,17 @@ button, input, optgroup, select, textarea {
     left: 0;
     position: absolute;
     top: 0;
+}
+
+.grid--compactGutter {
+    margin: 0 -0.4rem;
+}
+
+.grid {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
 
 .hiddenVisually {
