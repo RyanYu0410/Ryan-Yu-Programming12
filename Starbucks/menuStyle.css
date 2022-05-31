@@ -5,6 +5,7 @@
 
 body {
     color: black;
+    letter-spacing: -.01em;
 }
 
 p {
@@ -213,10 +214,6 @@ li {
     font-size: 1.0rem;
 }
 
-.mr3 {
-    margin-right: 1.6rem !important;
-}
-
 button {
     background: transparent;
     border: 0;
@@ -251,7 +248,7 @@ button, input, optgroup, select, textarea {
 }
 
 .footer___1Cqf7 {
-    box-shadow: 0 -1px 3px rgb(0 0 0 / 10%), 0 -2px 2px rgb(0 0 0 / 6%), 0 0 2px rgb(0 0 0 / 7%);
+
     margin-top: 4.8rem;
     padding-bottom: 124px;
     padding-top: 3.2rem;
@@ -347,10 +344,23 @@ button, input, optgroup, select, textarea {
     padding-right: 9% !important;
 }
 
-.grid--compactGutter .gridItem {
-    padding: 0 0.4rem !important;
+.grid--compactGutter {
+    margin: 0 -0.4rem !important;
 }
-
+.gridItem {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    vertical-align: top;
+    width: 100%;
+    padding: 0 0.4rem;
+}
+.thumb___3fkyn {
+    width: 100%;
+    max-width: 112px;
+}
 .size12of12 {
     width: 100%;
 }
@@ -393,19 +403,8 @@ button, input, optgroup, select, textarea {
     transition: opacity .3s ease-in;
 }
 
-.sb-imageFade__imagePositioning {
-    border-radius: inherit;
-    left: 0;
-    position: absolute;
-    top: 0;
-}
-
-.md-size6of12 {
-    width: 50%;
-}
-
 .lg-mb5 {
-    margin-bottom: 3.2rem !important;
+    margin-bottom: 2rem !important;
 }
 
 .text-bold {
@@ -420,27 +419,9 @@ button, input, optgroup, select, textarea {
     padding-bottom: 2rem !important;
 }
 
-.lg-pt6 {
-    padding-top: 4rem !important;
-}
-
 .sb-rule {
     border: 0;
 }
-
-.items-center {
-    align-items: center !important;
-}
-
-.grid--compactGutter .gridItem {
-    padding: 0 0.2rem;
-}
-
-.thumb___3fkyn {
-    max-width: 72px;
-    width: 100%;
-}
-
 .baseMenu___1AWcA {
     flex: 1 1 0;
     overflow: auto;
@@ -449,11 +430,13 @@ button, input, optgroup, select, textarea {
 }
 
 .lg-pt6 {
-    padding-top: 4rem !important;
+    padding-top: 2rem !important;
 }
-
+.lg-pb6 {
+    padding-bottom: 4rem!important;
+}
 .mr3 {
-    margin-right: 1.6rem !important;
+    margin-right: 1rem !important;
 }
 
 .relative {
@@ -476,30 +459,18 @@ button, input, optgroup, select, textarea {
     height: 100% !important;
 }
 
-.grid img {
-    height: auto;
-    max-width: 100%;
-}
-
 .sb-imageFade__show {
     opacity: 1;
     transition: opacity .3s ease-in;
 }
-
-.sb-imageFade__imagePositioning {
-    border-radius: inherit;
-    left: 0;
-    position: absolute;
-    top: 0;
-}
-
 .grid {
-    display: block;
-    margin: 0;
+    display: table;
     padding: 0;
     text-align: left;
 }
-
+section {
+    display: block;
+}
 .hiddenVisually {
     clip: rect(1px, 1px, 1px, 1px) !important;
     border: 0 !important;
@@ -511,7 +482,7 @@ button, input, optgroup, select, textarea {
 }
 
 .md-size6of12 {
-    width: 50%;
+    width: 400px;
 }
 
 .pb5 {
