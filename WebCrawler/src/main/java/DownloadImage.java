@@ -7,43 +7,43 @@ import java.nio.charset.StandardCharsets;
 
 public class DownloadImage {
     /**
-     * 下载图片到指定目录
+     * DownloadImage to path
      *
-     * @param filePath 文件路径
-     * @param imgUrl   图片URL
+     * @param filePath filepath
+     * @param imgUrl   imgURL
      */
     public static void DownloadImages(String filePath, String imgUrl) {
-        // 若指定文件夹没有，则先创建
+        // If path exist otherwise create
         File dir = new File(filePath);
         if (!dir.exists()) {
             dir.mkdirs();
         }
-        // 截取图片文件名
+        // img name
         String fileName = imgUrl.substring(imgUrl.lastIndexOf('/') + 1, imgUrl.length());
 
-        // 文件名里面可能有中文或者空格，所以这里要进行处理。但空格又会被URLEncoder转义为加号
+        // Using URLEncoder to change space to +
         String urlTail = URLEncoder.encode(fileName, StandardCharsets.UTF_8);
-        // 因此要将加号转化为UTF-8格式的%20
+        // UTF-8 format + to %20
         imgUrl = imgUrl.substring(0, imgUrl.lastIndexOf('/') + 1) + urlTail.replaceAll("\\+", "\\%20");
 
-        // 写出的路径
+        // Print Path
         File file = new File(filePath + File.separator + fileName);
 
         try {
-            // 获取图片URL
+            // Get img URL
             URL url = new URL(imgUrl);
-            // 获得连接
+            // Create Connection
             URLConnection connection = url.openConnection();
-            // 设置10秒的相应时间
+            // Set 10 s connection time
             connection.setConnectTimeout(10 * 1000);
-            // 获得输入流
+            // get Input Stream
             InputStream in = connection.getInputStream();
-            // 获得输出流
+            // get Output Stream
             BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(file));
-            // 构建缓冲区
+            // Create buffer
             byte[] buf = new byte[1024];
             int size;
-            // 写入到文件
+            // write to file
             while (-1 != (size = in.read(buf))) {
                 out.write(buf, 0, size);
             }
