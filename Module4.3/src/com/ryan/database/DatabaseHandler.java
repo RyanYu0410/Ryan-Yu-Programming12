@@ -13,7 +13,8 @@ public class DatabaseHandler {
     }
 
     private void createTable() {
-        String TABLE_NAME = "MEMBER";
+//        Here put file name
+        String TABLE_NAME = "FILES";
         try {
             stmt = conn.createStatement();
             DatabaseMetaData dmn = conn.getMetaData();
@@ -21,11 +22,14 @@ public class DatabaseHandler {
             if (tables.next()) {
                 System.out.println("Table " + TABLE_NAME + " exists");
             } else {
-                String statement = "CREATE TABLE " + TABLE_NAME + " ("
-                        + "id varchar(200) primary key, \n"
+                //language=Derby
+                String statement = "CREATE TABLE "+TABLE_NAME+"("
+                        + "num INT NOT NULL  GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1) , \n "
                         + "name varchar(200), \n"
-                        + "email varchar(200), \n"
-                        + "nickname varchar(200))";
+                        + "path varchar(200), \n"
+                        + "extension varchar(200), \n"
+                        + "file_size varchar(200))";
+
                 System.out.println(statement);
                 stmt.execute(statement);
             }
@@ -57,7 +61,6 @@ public class DatabaseHandler {
         } catch (SQLException throwable) {
             System.out.println(throwable);
             System.out.println("Did not entre data");
-
         }
         return false;
     }
