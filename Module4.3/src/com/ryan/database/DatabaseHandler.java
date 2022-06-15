@@ -30,7 +30,6 @@ public class DatabaseHandler {
             if (tables.next()) {
                 System.out.println("Table " + name + " exists");
             } else {
-                //language=Derby
                 String statement = "CREATE TABLE "+TABLE_NAME+"("
                         + "num INT NOT NULL  GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1) , \n "
                         + "name varchar(200), \n"
