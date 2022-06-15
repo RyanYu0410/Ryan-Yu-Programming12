@@ -4,23 +4,31 @@ import java.sql.*;
 
 public class DatabaseHandler {
     private static final String DB_url = "jdbc:derby:database/forum;create=true";
+    public static String name; //Table name
     private static Connection conn = null;
     private static Statement stmt = null;
+    public static DatabaseHandler handler;
 
     public DatabaseHandler() {
         createConnection();
         createTable();
     }
 
+    public static DatabaseHandler getHandler() {
+        if (handler == null) {
+            handler = new DatabaseHandler();
+        }
+        return handler;
+    }
+
     private void createTable() {
-//        Here put file name
-        String TABLE_NAME = "FILES";
+        String TABLE_NAME = name;
         try {
             stmt = conn.createStatement();
             DatabaseMetaData dmn = conn.getMetaData();
             ResultSet tables = dmn.getTables(null, null, TABLE_NAME, null);
             if (tables.next()) {
-                System.out.println("Table " + TABLE_NAME + " exists");
+                System.out.println("Table " + name + " exists");
             } else {
                 //language=Derby
                 String statement = "CREATE TABLE "+TABLE_NAME+"("
