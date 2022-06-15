@@ -20,7 +20,7 @@ public class Main {
 //    }
 
     public static void addFile(String file_name, String path, String extension, String file_size) {
-        String qu="INSERT FILES" + DatabaseHandler.name +" (file_name, path, extension, file_size) VALUES (" +
+        String qu="INSERT INTO " + DatabaseHandler.name +" (file_name, path, extension, file_size) VALUES (" +
                 "'" + file_name + "',"+
                 "'" + path + "',"+
                 "'" + extension + "',"+
@@ -67,12 +67,10 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         System.out.println("(1)if you already have files -->Print info\n(2)Start importing\n");
         if (scan.nextLine().equals("1")) { // Option for user to either input the absolute path of the folder and create table or check the old SQLs.
-
             System.out.println("Enter your folder name to retrieve your information: ");
             String tableName = scan.nextLine();
             handler = new DatabaseHandler(); // Set up a null handler since no folder name is given
             retrieveFile(tableName);
-
         } else if (scan.nextLine().equals("2")) {
             System.out.println("Enter the absolute path of your folder: ");
             String path = scan.nextLine();

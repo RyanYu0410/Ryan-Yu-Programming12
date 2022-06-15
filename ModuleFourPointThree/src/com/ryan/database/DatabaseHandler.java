@@ -32,7 +32,7 @@ public class DatabaseHandler {
             } else {
                 String statement = "CREATE TABLE "+TABLE_NAME+"("
                         + "num INT NOT NULL  GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1) , \n "
-                        + "name varchar(200), \n"
+                        + "file_name varchar(200), \n"
                         + "path varchar(200), \n"
                         + "extension varchar(200), \n"
                         + "file_size varchar(200))";
