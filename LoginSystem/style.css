@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #cccccc;
+}
+input[type=text]:focus {
+    background-color: white;
+}
+input[type=text]:focus {
+    background-color: white;
+}
+.main-wrapper {
+    margin: 0 auto;
+    width: 100%;
+}
+header nav {
+    height: 60px;
+    background: linen;
+    padding-left: 75px;
+}
+
+header nav ul {
+    float: left;
+}
+
+header nav ul li {
+    float: left;
+    font-family: Georgia;
+    font-size: 20px;
+    line-height: 63px;
+    width: 75px;
+    height: 75px;
+    background-color: brown;
+    border-radius: 50%;
+    border: solid 1px brown;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: white;
+    text-align: center;
+    display: block;
+}
+.nav-login {
+    padding-top: 5px;
+}
+.nav-login form{
+    float: right;
+    position: absolute;
+    right: 5%;
+}
+
+header. nav-login form input {
+    float: left;
+    width: 140px;
+    height: 30px;
+    padding: 0 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: #ccc;
+    font-family: arial, serif;
+    font-size: 14px;
+    color: #111;
+    line-height: 30px;
+}
+header .nav-login form button {
+    float: left;
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    border: none;
+    background-color: gray;
+    font-family: Arial;
+    font-size: 14px;
+    color: #111;
+    cursor: pointer;
+}
+header .nav-login form button:hover {
+    background-color: #cccccc;
+}
+header .nav-login a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: none;
+    float: left;
+    background-color: #fff;
+    font-family: Arial;
+    font-size: 16px;
+    color: #111111;
+    line-height: 63px;
+    cursor: pointer;
+}
+.main-container h2 {
+    font-family: Georgia;
+    background-position-y: bottom;
+    background-size: cover;
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/038/158/328/large/florent-lebrun-006-entrance.jpg?1622339472");
+    font-size: 50px;
+    letter-spacing: 1px;
+    color: white;
+    line-height: 190px;
+    padding-bottom: 5%;
+}
+/*signup style*/
+.signup-form {
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.signup-form input {
+    width: 90%;
+    height: 40px;
+    padding: 0 5%;
+    border: none;
+    margin-bottom: 4px;
+    background-color: aquamarine;
+    font-family: Arial;
+    font-size: 16px;
+    color: #111111;
+    line-height: 40px;
+}
+.signup-form button {
+    display: block;
+    width: 30%;
+    height: 40px;
+    border: none;
+    margin: 0 auto;
+    background-color: #222;
+    font-family: Arial;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+.signup-form button:hover {
+    background-color: gray;
+}
+.post-title {
+    font-family: "Apple SD Gothic Neo";
+    font-size: 75px;
+    border-bottom: solid 1px #222222;
+}
+.index-info {
+    background-color: #292929;
+    display: flex;
+    padding: 70px 2px 20px;
+}
+.post-container {
+    display: block;
+    margin: 10px 7%;
+    width: 100%;
+    background-color: white;
+    border: solid 1px red;
+    border-radius: 10px;
+}
+.post-innerContainer {
+    margin: 45px 45px 0 60px;
+}
+.post-content{
+    font-size: 20px;
+    padding-top: 25px;
+    padding-left: 50px;
+    margin-bottom: 30px;
+    color: #222222;
+}
+.post-user {
+    float: right;
+    font-size: 20px;
+    border-bottom: solid 1px #cccccc;
+    margin-top: 20px;
+    font-style: normal;
+}
+.post-time {
+    font-size: 14px;
+    padding: 15px 10px 3px;
+    border-bottom: double 1px #222222;
+    margin: 20px 0 20px 20px;
+    width: 90%;
+}
+.post-direct {
+    font-size: 17px;
+    margin-right: 10px;
+    padding: 10px 40px 3px 20px;
+    font-style: italic;
+}
+footer {
+    height: 75px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+footer div div a {
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+footer div div a p{
+    border-bottom:solid 2px darkred;
+    border-bottom-width: 10px;
+
+    border-radius: 50%;
+}
+footer div div a img{
+    height: 100px;
+    border-radius: 50%;
+    border: solid 2px darkred;
+}
