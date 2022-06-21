@@ -6,6 +6,7 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
 public class DownloadImage {
+
     /**
      * DownloadImage to path
      *
