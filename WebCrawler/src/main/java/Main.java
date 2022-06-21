@@ -9,21 +9,10 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) throws IOException {
 //        url here
-        String url = "https://www.pixiv.net/ranking.php";
+        String url = "https://www.behance.net/galleries";
         try {
             // Get Document
-            //This will get response.
-            Connection.Response res = Jsoup
-                    .connect("https://www.pixiv.net/")
-                    .data("loginField", "login@login.com", "passField", "pass1234")
-                    .method(Connection.Method.POST)
-                    .execute();
-
             //This will get cookies
-            Map<String, String> cookies = res.cookies();
-
-            //And this is the easieste way I've found to remain in session
-            Document doc = Jsoup.connect("https://www.pixiv.net/").cookies(cookies).get();
 
             Document document = Jsoup.connect(url)
                     .referrer("https://accounts.pixiv.net/")
