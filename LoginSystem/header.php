@@ -1,4 +1,4 @@
-<?php session_start()?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +12,18 @@
     <nav>
         <div class="main-wrapper">
             <ul>
-                <li><a href="index.php">Home</a> </li>
-                <li><a href="signup.php">Sign Up</a> </li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="signup.php">Sign Up</a></li>
+                <li><a href="post.php">Post</a></li>
             </ul>
             <div class="nav-login">
                 <?php
                 if (isset($_SESSION['u_id'])) {
                     echo '<form  class="nav-login" action="includes/logout.php" method="POST">
-                        <button type="submit" name="logout">Log Out</button>
+                        <button type="submit" name="logout">Log Out</button>                   
                     </form>';
+                    $u_id= $_SESSION['u_id'];
+                   echo "<div>welcome&nbsp;$u_id</div>";
                 }else{
                     echo '<form class="nav-login" action="includes/login.php" method="POST">
                             <input type="text" name="uid" placeholder="Username/email">
