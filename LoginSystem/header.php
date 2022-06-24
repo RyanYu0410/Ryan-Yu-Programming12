@@ -22,8 +22,8 @@
                     echo '<form  class="nav-login" action="includes/logout.php" method="POST">
                         <button type="submit" name="logout">Log Out</button>                   
                     </form>';
-                        $GLOBALS['login_uid'] = $_SESSION['u_uid'];
-                   echo "<div>welcome&nbsp;$login_uid</div>";
+
+                   echo "<div>welcome&nbsp;".$_SESSION['u_uid']."</div>";
                 }else{
                     echo '<form class="nav-login" action="includes/login.php" method="POST">
                             <input type="text" name="uid" placeholder="Username/email">

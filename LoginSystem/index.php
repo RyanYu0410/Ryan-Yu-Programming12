@@ -1,37 +1,42 @@
 <?php
 include_once 'header.php';
+include_once 'includes/database.php';
 ?>
     <section class="main-container">
         <div class="main-wrapper">
             <h2>Home Page</h2>
             <?php
             if (isset($_SESSION['u_uid'])) {
-                $sql = "SELECT * FROM users WHERE user_uid='$u_uid' OR user_email='$u_uid';";
-//                $result = mysqli_query($conn, $sql);
-                for ($i = 1; $i < 5; $i++) {
-                    echo '
+                $sql = "SELECT post_id, title, content,timedate,user_uid FROM posts";
+                $result = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '
             <div class="index-info">
                 <div class="post-container">
                     <div class="post-innerContainer">
                         <h4 class="post-title">
-                            Its nice to meet you
+                            ' . $row["title"] . '
                         </h4>
                         <p class="post-content">
-                            Please go to "signup" to see all the contents
+                            ' . $row["content"] . '
                             <br>
                         </p>
                         <div class="post-direct">
                             >See full content here
                             <p class="post-user">
-                            User name
+                            ' . $row["user_uid"] . '
                             </p>
                         </div>
                     </div>
                     <div class="post-time">
-                        PST 000nbfs
+                        ' . $row["timedate"] . '
                     </div>
                 </div>
             </div>';
+                    }
+                } else {
+                    echo "0 结果";
                 }
             }
             ?>
