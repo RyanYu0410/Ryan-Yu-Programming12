@@ -1,6 +1,5 @@
 <?php
 include_once 'header.php';
-include_once 'includes/database.php';
 ?>
 <section class="main-container">
     <div class="main-wrapper">
@@ -47,7 +46,6 @@ include_once 'includes/database.php';
         </form>
     </div>
 </section>
-
 <?php
 include_once 'footer.php';
 ?>

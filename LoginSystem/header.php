@@ -18,12 +18,12 @@
             </ul>
             <div class="nav-login">
                 <?php
-                if (isset($_SESSION['u_id'])) {
+                if (isset($_SESSION['u_uid'])) {
                     echo '<form  class="nav-login" action="includes/logout.php" method="POST">
                         <button type="submit" name="logout">Log Out</button>                   
                     </form>';
-                    $u_id= $_SESSION['u_id'];
-                   echo "<div>welcome&nbsp;$u_id</div>";
+                        $GLOBALS['login_uid'] = $_SESSION['u_uid'];
+                   echo "<div>welcome&nbsp;$login_uid</div>";
                 }else{
                     echo '<form class="nav-login" action="includes/login.php" method="POST">
                             <input type="text" name="uid" placeholder="Username/email">
